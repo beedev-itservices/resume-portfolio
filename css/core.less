@@ -1,0 +1,126 @@
+// CSS Reset
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Mixins
+.flexrow() {display: flex;
+    flex-direction: row;}
+.flexcolumn() {display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+.text(@align, @font, @color) {text-align: @align;
+    font-size: @font;
+    color: @color;}
+
+
+// Variables
+@1175: ~"only screen and (max-width: 1175px)";
+@930: ~"only screen and (max-width: 930px)";
+@730: ~"only screen and (max-width: 730px)";
+@400: ~"only screen and (max-width: 400px)";
+@mainbg: white;
+@mainfont: black;
+@navbg: #33cccc;
+@navfont: #145252;
+@border: 3px double blue;
+
+
+// Basics
+.center {margin: auto;}
+body {background-color: @mainbg;}
+html {scroll-behavior: smooth;}
+
+
+// Navigation
+
+.sidebar {margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: @navbg;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+
+    img {position: relative;
+        width: 8em;
+        border-radius: 40%;
+        padding: 1.5em 7em;}
+
+    h2 {.text(center, 1.5em, @navfont);
+        padding: .5em;}
+
+    nav {.flexcolumn();
+        flex-wrap: wrap;
+    }
+}
+
+// Main
+
+.main {margin-left: 350px;
+    .flexcolumn();
+
+    header {.flexcolumn();
+        width: 96.5%;
+        padding: 1em;
+        line-height: 2;
+        border-bottom: @border; }
+
+    .content {.flexrow();
+        padding: 1em;}
+
+    footer {.flexcolumn();
+        border: @border;
+        background-color: @mainbg;
+        width: 98%;
+        .text(center, 1.2rem, @mainfont);
+        line-height: 2;}
+
+}

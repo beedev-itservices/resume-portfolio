@@ -1,0 +1,200 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.center {
+  margin: auto;
+}
+body {
+  background-color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  background-color: #33cccc;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar img {
+  position: relative;
+  width: 8em;
+  border-radius: 40%;
+  padding: 1.5em 7em;
+}
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #145252;
+  padding: 0.5em;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main {
+  margin-left: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96.5%;
+  padding: 1em;
+  line-height: 2;
+  border-bottom: 3px double blue;
+}
+.main .content {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+.main footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px double blue;
+  background-color: white;
+  width: 98%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  line-height: 2;
+}
