@@ -7,6 +7,8 @@
         img {width: 7em;
             padding: 1.5em 5.5em;}
     }
+
+    .main {margin-left: 300px;}
 }
 @media @930 {
     .sidebar {width: 275px;
@@ -14,9 +16,11 @@
         img {width: 6em;
             padding: 1.5em 5em;}
     }
+
+    .main {margin-left: 275px;}
 }
 
-@media @730 {
+@media @800 {
     .sidebar {width: 100%;
         height: auto;
         position: fixed;
@@ -26,12 +30,41 @@
         img {width: 5em;
             padding: 1em;}
 
-        h2 {.flexrow();
-            align-items: center;}
+        .sitetitle {
+
+            h2 {font-size: 1.3em;}
+
+            h3 {font-size: 1em;}
+        }
 
         nav {.flexrow();
         
             a {padding: .5em;}
+        }
+
+        footer {display: none;}
+    }
+
+    .main {margin-left: 0;
+    
+        footer {.flexcolumn();
+            border: @border;
+            background-color: @mainbg;
+            width: 98%;
+            line-height: 2;
+
+            p {.text(center, 1rem, @mainfont);}
+        
+            .social {.flexrow();
+            
+                a {.links(@altfont);
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1em;
+          
+                    &:hover {.hover(@mainfont, @mainbg);}
+                }
+            }
         }
     }
 }
@@ -40,37 +73,16 @@
     .sidebar {
 
         .hide {display: none;}
+
+        .sitetitle {
+
+            h2 {font-size: 1em;}
+
+            h3 {font-size: .8em;}
+        }
     }
+
+    .main {}
 }
 
 
-
-
-// Main @media
-@media @1175 {
-    .main {margin-left: 300px;}
-}
-
-@media @930 {
-    .main {margin-left: 275px;}
-}
-
-@media @730 {
-    .main {margin-left: 0;
-    
-        footer {.flexcolumn();
-            border: @border;
-            background-color: @mainbg;
-            width: 98%;
-            .text(center, 1.2rem, @mainfont);
-            line-height: 2;
-        
-            a {.links(@altfont);
-          
-              &:hover {.hover(@mainfont, @mainbg);}
-            }
-        
-            .social {.flexrow();}
-          }
-    }
-}

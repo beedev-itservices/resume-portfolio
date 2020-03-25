@@ -15,6 +15,9 @@ html {
     width: 7em;
     padding: 1.5em 5.5em;
   }
+  .main {
+    margin-left: 300px;
+  }
 }
 @media only screen and (max-width: 930px) {
   .sidebar {
@@ -24,8 +27,11 @@ html {
     width: 6em;
     padding: 1.5em 5em;
   }
+  .main {
+    margin-left: 275px;
+  }
 }
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 800px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -38,10 +44,11 @@ html {
     width: 5em;
     padding: 1em;
   }
-  .sidebar h2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .sidebar .sitetitle h2 {
+    font-size: 1.3em;
+  }
+  .sidebar .sitetitle h3 {
+    font-size: 1em;
   }
   .sidebar nav {
     display: flex;
@@ -50,23 +57,9 @@ html {
   .sidebar nav a {
     padding: 0.5em;
   }
-}
-@media only screen and (max-width: 530px) {
-  .sidebar .hide {
+  .sidebar footer {
     display: none;
   }
-}
-@media only screen and (max-width: 1175px) {
-  .main {
-    margin-left: 300px;
-  }
-}
-@media only screen and (max-width: 930px) {
-  .main {
-    margin-left: 275px;
-  }
-}
-@media only screen and (max-width: 730px) {
   .main {
     margin-left: 0;
   }
@@ -78,21 +71,37 @@ html {
     border: 3px double #1f7a7a;
     background-color: #ebfafa;
     width: 98%;
-    text-align: center;
-    font-size: 1.2rem;
-    color: #0a2929;
     line-height: 2;
   }
-  .main footer a {
-    color: #1f7a7a;
-    text-decoration: none;
-  }
-  .main footer a:hover {
+  .main footer p {
+    text-align: center;
+    font-size: 1rem;
     color: #0a2929;
-    background-color: #ebfafa;
   }
   .main footer .social {
     display: flex;
     flex-direction: row;
+  }
+  .main footer .social a {
+    color: #1f7a7a;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  .main footer .social a:hover {
+    color: #0a2929;
+    background-color: #ebfafa;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .sidebar .hide {
+    display: none;
+  }
+  .sidebar .sitetitle h2 {
+    font-size: 1em;
+  }
+  .sidebar .sitetitle h3 {
+    font-size: 0.8em;
   }
 }
