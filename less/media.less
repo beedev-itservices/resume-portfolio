@@ -56,5 +56,21 @@
 }
 
 @media @730 {
-    .main {margin-left: 0;}
+    .main {margin-left: 0;
+    
+        footer {.flexcolumn();
+            border: @border;
+            background-color: @mainbg;
+            width: 98%;
+            .text(center, 1.2rem, @mainfont);
+            line-height: 2;
+        
+            a {.links(@altfont);
+          
+              &:hover {.hover(@mainfont, @mainbg);}
+            }
+        
+            .social {.flexrow();}
+          }
+    }
 }

@@ -8,75 +8,90 @@
     width: 350px;
     background-color: @navbg;
     position: fixed;
+    border-right: @border;
     height: 100%;
     overflow: auto;
 
     img {position: relative;
-        width: 8em;
-        border-radius: 40%;
-        padding: 1.5em 6.5em;}
+      width: 8em;
+      border-radius: 40%;
+      padding: 1.5em 6.5em;}
 
     h2 {.text(center, 1.5em, @navfont);
-        padding: .5em;}
+      padding: .5em;}
+
+    h3 {.text(center, 1.2em, @navfont);
+      padding: .5em;}
 
     nav {.flexcolumn();
-        flex-wrap: wrap;
-      
-      a {.links(#fff);
+      flex-wrap: wrap;
+    
+      a {.links(@links);
         padding: 1em;
-      
+    
         &:hover {.hover(@navfont, @mainbg);}
+    }
+  }
+
+  footer {.flexcolumn();
+    margin-top: 8em;
+    border-top: @border;
+    line-height: 2;
+
+    p {.text(center, 1rem, @mainfont);}
+
+    .social {.flexrow();
+
+      a {.links(@altfont);
+        justify-content: space-between;
+        align-items: center;
+        padding: .5em;
+  
+        &:hover {.hover(@mainfont, @mainbg);}
       }
     }
+  }
 }
 
 // Main
 
 .main {margin-left: 350px;
-    .flexcolumn();
+  .flexcolumn();
 
-    header {.flexcolumn();
-        width: 96.5%;
-        padding: 1em;
-        line-height: 2;
-        border-bottom: @border;
-  
-      h1 {.text(center, 3em, @mainfont);}
+  header {.flexcolumn();
+    width: 96.5%;
+    padding: 1em;
+    line-height: 2;
+    border-bottom: @border;
+
+    h1 {.text(center, 3em, @mainfont);}
   }
 
-    .content {.flexcolumn();
-        padding: 1em;
-  
-      p {.text(center, 1.4em, @mainfont);
-        padding: 1em;}
+  .content {.flexcolumn();
+    padding: 1em;
       
-      .contact {.text(center, 1.3em, @mainfont);
+    .links {.flexrow();
+    
+      .thelinks {.text(center, 1.3em, @mainfont);
         padding: 1em;
-      
+        
         ul {padding: 1em;
+  
           li {.text(left, 1em, @mainfont);
             padding: .5em;
+  
             a {.links(@altfont);
-            
+              
               &:hover {.hover(@mainbg, @navbg);}
+  
             }
           }
         }
       }
+    }
   }
 
-    footer {.flexcolumn();
-        border: @border;
-        background-color: @mainbg;
-        width: 98%;
-        .text(center, 1.2rem, @mainfont);
-        line-height: 2;
-      a {.links(@altfont);
-      
-        &:hover {.hover(@mainfont, @mainbg);}
-      }
-  }
-
+  footer {display: none;}
 }
 
 
